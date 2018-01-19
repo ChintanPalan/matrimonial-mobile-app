@@ -9,6 +9,8 @@ body{font-family: 'Calibre-Light'; color: var(--main-color); font-size: 18px;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.ui-mobile, .ui-mobile body{ height: 100%; }
+
 .transition{-moz-transition: all 1s; -webkit-transition: all 1s; -o-transition: 1s; transition: all 1s;}
 
 @font-face {
