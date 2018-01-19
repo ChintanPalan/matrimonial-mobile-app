@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <!-- <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self'; media-src *; img-src * data: content:;"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta charset="UTF-8">
+    <title>HTML</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <link type="text/css" href="css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/helium.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+<div data-role="page" id="welcome">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 pt25 pb25">
+                <div class="vertical-middle-parent">
+                    <div class="vertical-middle">
+                        <img src="images/logo.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
+                    <div class="panel-body p25">
+                        <a href="#login" class="btn btn-primary fs20 text-center br btn-block">Login</a>
+                        <a href="#signup" class="btn btn-secondary fs20 text-center br btn-block">Signup</a>
+                        <h3 class="text-center fwb mt10 mb10">OR</h3>
+                        <a href="#signup" class="btn btn-blue fs20 text-center br btn-block">Facebook</a>
+                        <a href="#signup" class="btn btn-red fs20 text-center br btn-block">Google+</a>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+<div data-role="page" class="main-overlay" id="signup">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 pt25 pb25">
+                <div class="vertical-middle-parent">
+                    <div class="vertical-middle">
+                        <img src="images/logo.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
+                    <div class="panel-heading">
+                        <a href="#" onclick="goBack();">
+                            <span class="w20 pull-left"><i class="icon icon-back fs20 fwb"></i></span>
+                        </a>
+                        <h3 class="panel-title  pull-left w60">Signup</h3>
+                        <a id="sign-up-button" href="#">
+                            <span class="w20  pull-left">
+                                <i class="icon icon-confirm fs20 fwb pull-right"></i>
+                            </span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <form id="sign-up-form">
+                            <div class="form-group">
+                                <label for="sign-up-name" class="control-label">Name</label>
+                                <input type="text" id="sign-up-name" class="form-control brr">
+                            </div>
+                            <div class="form-group">
+                                <label for="sign-up-email" class="control-label">Email</label>
+                                <input type="email" id="sign-up-email" class="form-control brr">
+                            </div>
+                            <div class="form-group">
+                                <label for="sign-up-password" class="control-label">Password</label>
+                                <input type="password" id="sign-up-password" class="form-control brr">
+                            </div>
+                            <div class="form-group">
+                                <label for="sign-up-confirm-password" class="control-label">Confirm Password</label>
+                                <input type="password" id="sign-up-confirm-password" class="form-control brr">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" class="main-overlay" id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 pt25 pb25">
+                <div class="vertical-middle-parent">
+                    <div class="vertical-middle">
+                        <img src="images/logo.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
+                    <form id="login-form">
+                        <div class="panel-heading">
+                            <a href="#" onclick="goBack();">
+                                <span class="w20 pull-left"><i class="icon icon-back fs20 fwb"></i></span>
+                            </a>
+                            <h3 class="panel-title  pull-left w60">Login</h3>
+                            <a href="#home" id="login-button">
+                                <span class="w20  pull-left">
+                                    <i class="icon icon-confirm fs20 fwb pull-right"></i>
+                                </span>
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="login-email" class="control-label">Email</label>
+                                <input type="email" id="login-email" class="form-control brr">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password" class="control-label">Password</label>
+                                <input type="password" id="login-password" class="form-control brr">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" class="main-overlay" id="home">
+    <div class="container">
+        <div class="row pt25 mb10 main-nav">
+            <div class="col-xs-12">
+                <ul class="main-nav">
+                    <li>
+                        <a href="#home" class="active w20"><i class="icon icon-home fs30 text-center fwb"></i><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="#home" class="w20"><i class="icon icon-message fs30 text-center fwb"></i><span>Messages</span></a>
+                    </li>
+                    <li>
+                        <a href="#home" class="w20"><i class="icon icon-group fs30 text-center fwb"></i><span>Matches</span></a>
+                    </li>
+                    <li>
+                        <a href="#home" class="w20"><i class="icon icon-girl fs30 text-center fwb"></i><span>Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="#home" class="w20"><i class="icon icon-search fs30 text-center fwb"></i><span>Search</span></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
+                    <div data-role="tabs" class="top-nav-tabs" id="tabs">
+                        <div data-role="navbar">
+                            <ul class="tab-control">
+                                <li><a href="#one" data-ajax="false">Profiles</a></li>
+                                <li><a href="#two" data-ajax="false">Shortlisted</a></li>
+                                <li><a href="#three" data-ajax="false">Shortlisted Me</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-body">
+                            <div id="one" class="ui-body-d ui-content">
+                                <h1>First tab contents</h1>
+                            </div>
+                            <div id="two">
+                                <ul data-role="listview" data-inset="true">
+                                    <li><a href="#">Acura</a></li>
+                                    <li><a href="#">Audi</a></li>
+                                    <li><a href="#">BMW</a></li>
+                                    <li><a href="#">Cadillac</a></li>
+                                    <li><a href="#">Ferrari</a></li>
+                                </ul>
+                            </div>
+                            <div id="three">
+                                <p>Third tab contents</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
