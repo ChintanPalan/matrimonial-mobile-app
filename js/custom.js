@@ -61,32 +61,6 @@ var signUpForm,
     subscriptionChangeForm,
     subscriptionCreateForm
     isLoggedIn=false;
-var planStructure = {
-    "free" : {
-        "monthly" : 0,
-        "yearly" : 0,
-        "monthlytotal" : 0,
-        "yearlytotal" : 0
-    },
-    "lite" : {
-        "monthly" : 29,
-        "yearly" : 25,
-        "monthlytotal" : 348,
-        "yearlytotal" : 300
-    },
-    "startup":{
-        "monthly" : 49,
-        "yearly" : 39,
-        "monthlytotal" : 588,
-        "yearlytotal" : 468
-    },
-    "professional":{
-        "monthly" : 79,
-        "yearly" : 65,
-        "monthlytotal" : 948,
-        "yearlytotal" : 780
-    }
-};
 var storage = window.localStorage;
 try{
     var userObject = storage.getItem('userObject');
@@ -103,7 +77,7 @@ try{
     swal(err.message);
     navigator.app.exitApp();
 }
-var serverBaseURL = 'https://admin.pressmate.io/';
+var serverBaseURL = 'https://matrimonial.giftmeindia.com/';
 var appRoutes = {
     "auth" : "app/user/token/get",
     "oauth" : "app/oauth/token/get",
@@ -144,6 +118,11 @@ function parseJSON(a){
 /* Variables initialisation & event Bindings*/
 $(document).ready(function(){
     /* Start Document ready */
+    $('.social-login-button').unbind().on('click',function(event){
+        event.preventDefault();
+        oAuthLogin($(this).data('provider'));
+    });
+    /*
     signUpForm = $('#sign-up-form');
     signUpForm.parsley();
     signUpForm.submit(function(event){ event.preventDefault();signUpFunction();});
@@ -221,7 +200,7 @@ $(document).ready(function(){
                 $('#preview_image').attr('src',data);
             }
         });
-    });
+    });*/
     /* End Document ready */
 });
 $(document).ajaxSend(function () {
@@ -237,7 +216,7 @@ $(document).bind('pagebeforechange', function(e, data) {
         var u = $.mobile.path.parseUrl(to);
         to = u.hash || '#' + u.pathname.substring(1);
         if (from) from = '#' + from.attr('id');
-        if (to === '#login' || to === '#signup') {
+        if (to === '#login' || to === '#signup' || to === '#welcome') {
             if(isLoggedIn){
                 e.preventDefault();
                 $.mobile.activePage.find('.ui-btn-active').removeClass('ui-btn-active');

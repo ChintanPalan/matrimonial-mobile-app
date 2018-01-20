@@ -63,6 +63,7 @@ body{font-family: 'Calibre-Light'; color: var(--main-color); font-size: 18px;
 .overflow-hidden{ overflow: hidden;}
 .heading{ font-weight: bold;font-family: 'Calibre-Light';}
 #features-carousel{background: rgba(255, 255, 255, 0.25);min-height: 225px;}
+a, a:hover, a:focus{ color: var(--main-color); }
 .br{ border-radius: 10px;}
 .br5{ border-radius: 5px;}
 .brl{ border-radius: 0 0 0 0; }
