@@ -134,30 +134,30 @@
 </div>
 <div data-role="page" class="main-overlay" id="home">
     <div class="container">
-        <div class="row pt25 mb10 main-nav">
+        <div class="row pt25 mb10 main-nav" data-role="tabs" >
             <div class="col-xs-12">
-                <ul class="main-nav">
+                <ul class="main-nav tab-control" data-role="navbar">
                     <li>
-                        <a href="#home" class="active w20"><i class="icon icon-home fs30 text-center fwb"></i><span>Home</span></a>
+                        <a href="#home" class="active"><i class="icon icon-home fs30 text-center fwb"></i><span>Home</span></a>
                     </li>
                     <li>
-                        <a href="#home" class="w20"><i class="icon icon-message fs30 text-center fwb"></i><span>Messages</span></a>
+                        <a href="#home" class=""><i class="icon icon-message fs30 text-center fwb"></i><span>Messages</span></a>
                     </li>
                     <li>
-                        <a href="#home" class="w20"><i class="icon icon-group fs30 text-center fwb"></i><span>Matches</span></a>
+                        <a href="#home" class=""><i class="icon icon-group fs30 text-center fwb"></i><span>Matches</span></a>
                     </li>
                     <li>
-                        <a href="#home" class="w20"><i class="icon icon-girl fs30 text-center fwb"></i><span>Profile</span></a>
+                        <a href="#home" class=""><i class="icon icon-girl fs30 text-center fwb"></i><span>Profile</span></a>
                     </li>
                     <li>
-                        <a href="#home" class="w20"><i class="icon icon-search fs30 text-center fwb"></i><span>Search</span></a>
+                        <a href="#home" class=""><i class="icon icon-search fs30 text-center fwb"></i><span>Search</span></a>
                     </li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row tab-body">
+            <div class="col-xs-12"  id="home-tab">
                 <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
                     <div data-role="tabs" class="top-nav-tabs" id="tabs">
                         <div data-role="navbar">
@@ -168,8 +168,79 @@
                             </ul>
                         </div>
                         <div class="tab-body">
-                            <div id="one" class="ui-body-d ui-content">
-                                <h1>First tab contents</h1>
+                            <div id="one" class="ui-body-d ui-content no-padding">
+                                <div class="profile-card br5 overflow-hidden">
+                                    <div class="left">
+                                        <img src="images/83.jpg" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="right">
+                                        <p>Lucas Thompson
+                                        <br>25 Years, 5 ft. 9 in.
+                                        <br>B.Com., Christian
+                                        <br>Paris, Europe</p>
+                                        <p>
+                                            <a href="">
+                                                <span><i class="icon icon-message"></i></span>
+                                                <span class="text">Send<br>Message</span>
+                                                <span class="clearfix"></span>
+                                            </a>
+                                            <a href="">
+                                                <span><i class="icon icon-heart"></i></span>
+                                                <span class="text">Show<br>Interest</span>
+                                                <span class="clearfix"></span>
+                                            </a>
+                                            <span class="clearfix"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="profile-card br5 overflow-hidden">
+                                    <div class="left">
+                                        <img src="images/83.jpg" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="right">
+                                        <p>Lucas Thompson
+                                        <br>25 Years, 5 ft. 9 in.
+                                        <br>B.Com., Christian
+                                        <br>Paris, Europe</p>
+                                        <p>
+                                            <a href="">
+                                                <span><i class="icon icon-message"></i></span>
+                                                <span class="text">Send<br>Message</span>
+                                                <span class="clearfix"></span>
+                                            </a>
+                                            <a href="">
+                                                <span><i class="icon icon-heart"></i></span>
+                                                <span class="text">Show<br>Interest</span>
+                                                <span class="clearfix"></span>
+                                            </a>
+                                            <span class="clearfix"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="profile-card br5 overflow-hidden">
+                                    <div class="left">
+                                        <img src="images/83.jpg" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="right">
+                                        <p>Lucas Thompson
+                                        <br>25 Years, 5 ft. 9 in.
+                                        <br>B.Com., Christian
+                                        <br>Paris, Europe</p>
+                                        <p>
+                                            <a href="">
+                                                <span><i class="icon icon-message"></i></span>
+                                                <span class="text">Send<br>Message</span>
+                                                <span class="clearfix"></span>
+                                            </a>
+                                            <a href="">
+                                                <span><i class="icon icon-heart"></i></span>
+                                                <span class="text">Show<br>Interest</span>
+                                                <span class="clearfix"></span>
+                                            </a>
+                                            <span class="clearfix"></span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div id="two">
                                 <ul data-role="listview" data-inset="true">

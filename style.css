@@ -60,9 +60,11 @@ body{font-family: 'Calibre-Light'; color: var(--main-color); font-size: 18px;
 .container{
     padding-top: 20px;
 }
+.overflow-hidden{ overflow: hidden;}
 .heading{ font-weight: bold;font-family: 'Calibre-Light';}
 #features-carousel{background: rgba(255, 255, 255, 0.25);min-height: 225px;}
 .br{ border-radius: 10px;}
+.br5{ border-radius: 5px;}
 .brl{ border-radius: 0 0 0 0; }
 .brr{ border-radius: 0 0 0 0; }
 .ui-input-text, .ui-input-search{ border-radius: 0 7px 0 7px;transition: all 0.3s ease; }
@@ -96,7 +98,7 @@ body{font-family: 'Calibre-Light'; color: var(--main-color); font-size: 18px;
 .fs20{ font-size: 20px;}
 .fs30{ font-size: 30px;}
 .fwb{ font-weight: bold; }
-.main-nav a{ color: white; opacity: 0.6;text-decoration: none; }
+.main-nav a{ color: white; opacity: 0.6;text-decoration: none;outline: none; }
 .block{ display: block;}
 ul.main-nav{ padding-left: 0px;text-align: center;}
 ul.main-nav li{ display: inline-block; padding: 0 6px;}
@@ -115,6 +117,18 @@ ul.main-nav li a span{ font-size: 15px;display: block; }
 .top-nav-tabs ul.tab-control li.ui-state-active{ border-bottom: 2px solid var(--main-color); }
 .top-nav-tabs ul.tab-control li.ui-state-active a{ color: var(--main-color); }
 
+.profile-card { border: 1px solid #ebe3fa;margin-top: 10px; }
+.profile-card:first-child { margin-top: 0px; }
+.profile-card p{ font-weight: bold; color: black; font-size: 15px; padding: 3px 8px; line-height: 18px; margin: 0; }
+.profile-card a{ text-decoration: none; width: 48%; display: block; float: left; border: 1px solid; border-radius: 7px; color: var(--main-color); border-color: var(--main-color);}
+.profile-card a i { font-size: 27px; }
+.profile-card a:nth-child(2){ margin-left: 5px;border-color:#ee1d23;color: #ee1d23; }
+.profile-card a span { display: block; float: left; padding: 2px 0 0 4px;}
+.profile-card a span.text { float: left; overflow: hidden; font-size: 12px; line-height: 13px; text-align: center; padding:0px;padding-top: 3px;margin-left: 4px; }
+.profile-card a span.clearfix{ padding:0px; }
+.profile-card .right { float: right;width: calc(100% - 120px);}
+.profile-card .left { float: left;}
+.profile-card img { width: 120px; height: 120px;}
 /* Padding & margin classes */
 .p25{ padding: 25px; }
 .pt25{ padding-top: 25px; }
