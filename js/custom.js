@@ -125,6 +125,10 @@ $(document).ready(function(){
     $(".profile-page a.read-more").on('click',function () {
         $('.profile-page').toggleClass('closeimg');
     });
+    $(window).on('swipe',function (event) {
+        $("body").append("<p>"+event.serialize()+"</p>");
+        swal("Swipe event called");
+    });
     /*
     signUpForm = $('#sign-up-form');
     signUpForm.parsley();
