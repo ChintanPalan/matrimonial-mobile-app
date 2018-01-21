@@ -115,6 +115,15 @@ function parseJSON(a){
         return JSON.parse(a);
     }
 }
+function imageOpenCloseToggle(){
+    var el = document.getElementById('.details-container');
+    swipedetect(el, function(swipedir){
+        alert(swipedir)
+        //swipedir contains either "none", "left", "right", "top", or "down"
+        if (swipedir =='top')
+            $('.profile-page').toggleClass('closeimg');
+    });
+}
 /* Variables initialisation & event Bindings*/
 $(document).ready(function(){
     /* Start Document ready */
@@ -125,10 +134,7 @@ $(document).ready(function(){
     $(".profile-page a.read-more").on('click',function () {
         $('.profile-page').toggleClass('closeimg');
     });
-    $(window).on('swipe',function (event) {
-        $("body").append("<p>"+event.serialize()+"</p>");
-        swal("Swipe event called");
-    });
+    imageOpenCloseToggle();
     /*
     signUpForm = $('#sign-up-form');
     signUpForm.parsley();
