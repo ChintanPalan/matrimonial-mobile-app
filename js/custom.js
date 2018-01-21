@@ -122,6 +122,9 @@ $(document).ready(function(){
         event.preventDefault();
         oAuthLogin($(this).data('provider'));
     });
+    $(".profile-page a.read-more").on('click',function () {
+        $('.profile-page').toggleClass('closeimg');
+    });
     /*
     signUpForm = $('#sign-up-form');
     signUpForm.parsley();
@@ -138,17 +141,7 @@ $(document).ready(function(){
     updateProfileSection = $('#update-profile-section');
     updatePasswordSection = $('#change-password-section');
     setPasswordSection = $('#set-password-section');
-    subscriptionCreateForm = $('#subscription-purchase-form');
-    subscriptionCreateForm.parsley();
-    newTicketForm = $("#new-ticket-form");
-    newTicketForm.parsley();
-    $('.social-login-button').unbind().on('click',function(event){
-        event.preventDefault();
-        oAuthLogin($(this).data('provider'));
-    });
-    $(".menu-toggle").on('click',openMenu);                                      
     $(".maincontain").unbind();
-    $.mobile.defaultPageTransition = 'slide';
     $('.toggle-password-visibility').on('click',function(){
         var input = $(this).parent().find('.password-input');
         if(input.attr('type') === "password"){
@@ -156,32 +149,6 @@ $(document).ready(function(){
         }else{
             input.attr('type','password');
         }
-    });
-    subscriptionChangeForm = $('#change-subscription-form');
-    var optionsHtml= '';
-    var date = new Date();
-    var i = date.getFullYear();
-    var date = i + 30;
-    while(date >= i){
-        optionsHtml+='<option value="'+i+'">'+i+'</option>';
-        i++;
-    }
-    $('#card-expiry-year').html(optionsHtml);
-    $("#toggle-open-communications").on('click',function(){
-        if($(this).prop('checked') == true){
-            $(".open-ticket").hide();
-            $(".closed-ticket").show();
-        }else{
-            $(".open-ticket").show();
-            $(".closed-ticket").hide();
-        }
-    });
-    $('#card-number').on('change keyup',function(){
-        cordova.plugins.stripe.validateCardNumber($('#card-number').val(), function(){
-            $('#card-number').removeClass('invalid-card');
-        }, function(){
-            $('#card-number').addClass('invalid-card');
-        });
     });
     $("#patient_pic").on('change',function(){
         var file_data = $('#patient_pic').prop('files')[0];
@@ -292,6 +259,7 @@ function serverOauth(user){
         }
     });
 }
+
 function serverAuth(user){
     $.ajax({
         cors:true,
@@ -318,6 +286,7 @@ function serverAuth(user){
         }
     });
 }
+
 function initializeUser(user){
     if(user.hasOwnProperty('photoUrl')){
         $('.profile-picture').attr('src',user.photoUrl).attr('alt',defaultPhotoUrl);
@@ -341,6 +310,7 @@ function initializeUser(user){
     }
     isLoggedIn = true;
 }
+
 function registerDeviceToUser(deviceId) {
     $.ajax({
         url:serverBaseURL+appRoutes['register-onesignal-id'],

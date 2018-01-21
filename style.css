@@ -65,6 +65,7 @@ body{font-family: 'Calibre-Light'; color: var(--main-color); font-size: 18px;
 #features-carousel{background: rgba(255, 255, 255, 0.25);min-height: 225px;}
 a, a:hover, a:focus{ color: var(--main-color); }
 .br{ border-radius: 10px;}
+.br.slant{ border-radius: 0 10px 0 10px;}
 .br5{ border-radius: 5px;}
 .brl{ border-radius: 0 0 0 0; }
 .brr{ border-radius: 0 0 0 0; }
@@ -72,7 +73,9 @@ a, a:hover, a:focus{ color: var(--main-color); }
 .ui-input-text.ui-focus, .ui-input-search.ui-focus{ border-radius: 0px 0px 0px 0px; }
 .btn-group .btn-half{ width: 50%; }
 .btn{ color: white; border: 0px; }
-.btn.btn-primary{ background: var(--main-color); }
+.btn.btn-bordered{ border: 2px solid; }
+.btn.btn-primary{ background: var(--main-color);border-color: var(--main-color); }
+.btn.btn-inverse{ border-color: var(--main-color);color:var(--main-color);background-color: #fff;}
 .btn.btn-secondary{ background: var(--color-1); }
 .btn.btn-blue{ background: rgb(85, 58, 151); }
 .btn.btn-red{ background:  rgb(238, 29, 35);  }
@@ -89,13 +92,8 @@ a, a:hover, a:focus{ color: var(--main-color); }
 }
 .panel-body{ padding: 10px;transition: all 1s ease;}
 .form-group{ margin-bottom: 10px; }
-.w10{ width: 10%; }
-.w20{ width: 20%; }
-.w40{ width: 40%; }
-.w50{ width: 50%; }
-.w60{ width: 60%; }
-.w80{ width: 80%; }
-.w100{ width: 100%; }
+
+
 .fs20{ font-size: 20px;}
 .fs30{ font-size: 30px;}
 .fwb{ font-weight: bold; }
@@ -130,13 +128,38 @@ ul.main-nav li a span{ font-size: 15px;display: block; }
 .profile-card .right { float: right;width: calc(100% - 120px);}
 .profile-card .left { float: left;}
 .profile-card img { width: 120px; height: 120px;}
+
+.my-images { background: #ebe3fa;padding: 5px;max-height: 20vh;overflow: hidden;position: relative;bottom: 0; }
+.my-images .col-xs-2 { padding: 5px; }
+.my-images .col-xs-2 img{ width: 45px;margin: 0 auto; }
+.my-images .col-xs-2 a{ background: var(--main-color);padding: 12px 16px;color: white;border-radius: 100%;font-size: 10px; }
+
+.panel-body { position: relative;}
+.panel-body .img-container{ margin: -12px;margin-bottom:-25px;position:relative;max-height: calc(50vh - 0px);overflow: hidden; }
+.panel-body .img-container img{ width:100%;height: 50vh;object-fit: cover; }
+.panel-body .img-container span.overlay{ bottom:0;width:100%;height: 2%;position:absolute; background: linear-gradient(rgba(0,0,0,0) 0%, rgba(255,76,246,1) 100%);}
+.panel-body .details-container { max-height: calc(50vh - 235px); }
+.panel-body .details-container .card{ border:2px solid var(--main-color);margin: 10px 0;padding: 5px; }
+.panel-body .details-container .card h4{ font-size: 18px;margin: 0px;font-weight: bold; }
+.panel-body .details-container .card p{ font-size: 15px;line-height:17px;color:black; }
+.panel-body a.read-more{ background: var(--color-1);border-radius: 0;position: absolute;left: 0;bottom: 0;padding: 0;background-color: rgba(255, 255, 255, 0.6);padding-bottom: 3px;opacity: 1;}
+.panel-body a.read-more img{ width: 25px;}
+
+.profile-page.closeimg .panel-body .img-container span.overlay{ height:150vh; }
+.profile-page.closeimg .panel-body .img-container{ max-height:50px;margin-bottom: 5px; }
+.profile-page.closeimg .panel-body.my-images{ max-height:0px;padding: 0px; }
+.profile-page.closeimg .details-container{ max-height:5000px;}
+.profile-page.closeimg .details-container{ max-height:5000px;}
+.profile-page.closeimg a.read-more{ opacity:0;}
+
 /* Padding & margin classes */
 .p25{ padding: 25px; }
 .pt25{ padding-top: 25px; }
 .pb25{ padding-bottom: 25px; }
 .pl25{ padding-left: 25px; }
 .pr25{ padding-right: 25px; }
-
+.pl5 { padding-left: 5px; }
+.pr5 { padding-right: 5px; }
 .p50{ padding: 50px; }
 .pt50{ padding-top: 50px; }
 .pb50{ padding-bottom: 50px; }
@@ -145,4 +168,13 @@ ul.main-nav li a span{ font-size: 15px;display: block; }
 
 .mt10{ margin-top: 10px; }
 .mb10{ margin-bottom: 10px; }
+.w10{ width: 10%; }
+.w20{ width: 20%; }
+.w40{ width: 40%; }
+.w50{ width: 50%; }
+.w60{ width: 60%; }
+.w80{ width: 80%; }
+.w100{ width: 100%; }
 
+/* Animations css */
+.transition{transition: all 1.5s ease;}

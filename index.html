@@ -12,7 +12,7 @@
     <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="css/helium.css">
-    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/sweetalert.css">-->
     <script type="text/javascript" src="cordova.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -162,7 +162,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12"  id="home-tab">
+            <div class="col-xs-12">
                 <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
                     <div data-role="tabs" class="top-nav-tabs" id="tabs">
                         <div data-role="navbar">
@@ -404,9 +404,9 @@
 </div>
 <div data-role="page" id="profile">
     <div class="container">
-        <div class="row main-nav" data-role="tabs" >
+        <div class="row " >
             <div class="col-xs-12">
-                <ul class="main-nav tab-control" data-role="navbar">
+                <ul class="main-nav">
                     <li>
                         <a href="#home"><i class="icon icon-home fs30 text-center fwb"></i><span>Home</span></a>
                     </li>
@@ -426,103 +426,117 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-        <div class="row tab-body">
-            <div class="col-xs-12"  id="home-tab">
-                <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
-                    <div data-role="tabs" class="top-nav-tabs" id="tabs">
-                        <div data-role="navbar">
-                            <ul class="tab-control">
-                                <li><a href="#one" data-ajax="false">Profiles</a></li>
-                                <li><a href="#two" data-ajax="false">Shortlisted</a></li>
-                                <li><a href="#three" data-ajax="false">Shortlisted Me</a></li>
-                            </ul>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel shadow-effect br overflow-hidden profile-page">
+                    <div class="panel-body">
+                        <div class="img-container transition">
+                            <img src="images/profile-image.jpg" class="img-responsive profile-image" alt="">
+                            <span class="overlay transition"></span>
                         </div>
-                        <div class="tab-body">
-                            <div id="one" class="ui-body-d ui-content no-padding">
-                                <div class="profile-card br5 overflow-hidden">
-                                    <div class="left">
-                                        <img src="images/83.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="right">
-                                        <p>Lucas Thompson
-                                        <br>25 Years, 5 ft. 9 in.
-                                        <br>B.Com., Christian
-                                        <br>Paris, Europe</p>
-                                        <p>
-                                            <a href="">
-                                                <span><i class="icon icon-message"></i></span>
-                                                <span class="text">Send<br>Message</span>
-                                                <span class="clearfix"></span>
-                                            </a>
-                                            <a href="">
-                                                <span><i class="icon icon-heart"></i></span>
-                                                <span class="text">Show<br>Interest</span>
-                                                <span class="clearfix"></span>
-                                            </a>
-                                            <span class="clearfix"></span>
-                                        </p>
-                                    </div>
+                        <div class="buttons-container">
+                            <div class="row">
+                                <div class="col-xs-6 pr5">
+                                    <a href="" class="button text-center btn btn-block btn-bordered btn-primary br5 fs20">Profile</a>
                                 </div>
-                                <div class="profile-card br5 overflow-hidden">
-                                    <div class="left">
-                                        <img src="images/83.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="right">
-                                        <p>Lucas Thompson
-                                        <br>25 Years, 5 ft. 9 in.
-                                        <br>B.Com., Christian
-                                        <br>Paris, Europe</p>
-                                        <p>
-                                            <a href="">
-                                                <span><i class="icon icon-message"></i></span>
-                                                <span class="text">Send<br>Message</span>
-                                                <span class="clearfix"></span>
-                                            </a>
-                                            <a href="">
-                                                <span><i class="icon icon-heart"></i></span>
-                                                <span class="text">Show<br>Interest</span>
-                                                <span class="clearfix"></span>
-                                            </a>
-                                            <span class="clearfix"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="profile-card br5 overflow-hidden">
-                                    <div class="left">
-                                        <img src="images/83.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="right">
-                                        <p>Lucas Thompson
-                                        <br>25 Years, 5 ft. 9 in.
-                                        <br>B.Com., Christian
-                                        <br>Paris, Europe</p>
-                                        <p>
-                                            <a href="">
-                                                <span><i class="icon icon-message"></i></span>
-                                                <span class="text">Send<br>Message</span>
-                                                <span class="clearfix"></span>
-                                            </a>
-                                            <a href="">
-                                                <span><i class="icon icon-heart"></i></span>
-                                                <span class="text">Show<br>Interest</span>
-                                                <span class="clearfix"></span>
-                                            </a>
-                                            <span class="clearfix"></span>
-                                        </p>
-                                    </div>
+                                <div class="col-xs-6 pl5">
+                                    <a href="" class="button text-center btn btn-block btn-inverse btn-bordered br5 fs20">Profile</a>
                                 </div>
                             </div>
-                            <div id="two">
-                                <ul data-role="listview" data-inset="true">
-                                    <li><a href="#">Acura</a></li>
-                                    <li><a href="#">Audi</a></li>
-                                    <li><a href="#">BMW</a></li>
-                                    <li><a href="#">Cadillac</a></li>
-                                    <li><a href="#">Ferrari</a></li>
-                                </ul>
+                        </div>
+                        <div class="details-container transition">
+                            <div class="card br slant">
+                                <h4>Basic Details</h4>
+                                <p>
+                                    Name : Deepika Padukone<br>
+                                    Gender : Female<br>
+                                    Age : 26<br>
+                                    Height : 5ft 4in<br>
+                                    Martial Status : Never Married<br>
+                                    Mother Tonge : Gujrati<br>
+                                    Physical Status : Normal<br>
+                                    Eating Habits : Vegetarian<br>
+                                    Drinking Habits : Occasional / Social Drinks<br>
+                                    Smoking Habits : Never Smokes<br>
+
+                                </p>
                             </div>
-                            <div id="three">
-                                <p>Third tab contents</p>
+                            <div class="card br slant">
+                                <h4>Basic Details</h4>
+                                <p>
+                                    Name : Deepika Padukone<br>
+                                    Gender : Female<br>
+                                    Age : 26<br>
+                                    Height : 5ft 4in<br>
+                                    Martial Status : Never Married<br>
+                                    Mother Tonge : Gujrati<br>
+                                    Physical Status : Normal<br>
+                                    Eating Habits : Vegetarian<br>
+                                    Drinking Habits : Occasional / Social Drinks<br>
+                                    Smoking Habits : Never Smokes<br>
+
+                                </p>
+                            </div>
+                            <div class="card br slant">
+                                <h4>Basic Details</h4>
+                                <p>
+                                    Name : Deepika Padukone<br>
+                                    Gender : Female<br>
+                                    Age : 26<br>
+                                    Height : 5ft 4in<br>
+                                    Martial Status : Never Married<br>
+                                    Mother Tonge : Gujrati<br>
+                                    Physical Status : Normal<br>
+                                    Eating Habits : Vegetarian<br>
+                                    Drinking Habits : Occasional / Social Drinks<br>
+                                    Smoking Habits : Never Smokes<br>
+
+                                </p>
+                            </div>
+                            <div class="card br slant">
+                                <h4>Basic Details</h4>
+                                <p>
+                                    Name : Deepika Padukone<br>
+                                    Gender : Female<br>
+                                    Age : 26<br>
+                                    Height : 5ft 4in<br>
+                                    Martial Status : Never Married<br>
+                                    Mother Tonge : Gujrati<br>
+                                    Physical Status : Normal<br>
+                                    Eating Habits : Vegetarian<br>
+                                    Drinking Habits : Occasional / Social Drinks<br>
+                                    Smoking Habits : Never Smokes<br>
+
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <a class="read-more btn btn-block">
+                            <img src="images/down.png" alt="">
+                        </a>
+                    </div>
+                    <div class="my-images transition panel-body">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <img src="images/83.jpg" class="img-responsive img-circle" alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="images/83.jpg" class="img-responsive img-circle"  alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="images/83.jpg"  class="img-responsive img-circle" alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="images/83.jpg" class="img-responsive img-circle"  alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <img src="images/83.jpg" class="img-responsive img-circle"  alt="">
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="">
+                                    <span class="add-image">+</span>
+                                </a>
                             </div>
                         </div>
                     </div>
