@@ -116,12 +116,19 @@ function parseJSON(a){
     }
 }
 function imageOpenCloseToggle(){
-    var el = document.getElementById('.details-container');
-    swipedetect(el, function(swipedir){
-        alert(swipedir)
-        //swipedir contains either "none", "left", "right", "top", or "down"
-        if (swipedir =='top')
-            $('.profile-page').toggleClass('closeimg');
+    var lastScrollTop = 0;
+    $(window).on('scroll', function() {
+        st = $(this).scrollTop();
+        if(st < lastScrollTop) {
+            //Scrolling Upwards
+            if(st == 0 ){
+                alert("You reached top");
+            }
+        }
+        else {
+            //Scrolling Downwards
+        }
+        lastScrollTop = st;
     });
 }
 /* Variables initialisation & event Bindings*/
