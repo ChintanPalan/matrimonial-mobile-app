@@ -116,19 +116,9 @@ function parseJSON(a){
     }
 }
 function imageOpenCloseToggle(){
-    var lastScrollTop = 0;
-    $(window).on('scroll', function() {
-        st = $(this).scrollTop();
-        if(st < lastScrollTop) {
-            //Scrolling Upwards
-            if(st == 0 ){
-                alert("You reached top");
-            }
-        }
-        else {
-            //Scrolling Downwards
-        }
-        lastScrollTop = st;
+    $(window).on('scroll', function(event) {
+        console.log("scrolling")
+        console.log(event)
     });
 }
 /* Variables initialisation & event Bindings*/

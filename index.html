@@ -20,7 +20,6 @@
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/sweetalert.js"></script>
     <script type="text/javascript" src="js/parsley.min.js"></script>
-    <script type="text/javascript" src="js/swipe_detect.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
 </head>
 <body>
@@ -75,10 +74,6 @@
                     <div class="panel-body">
                         <form id="sign-up-form">
                             <div class="form-group">
-                                <label for="sign-up-name" class="control-label">Name</label>
-                                <input type="text" id="sign-up-name" class="form-control brr">
-                            </div>
-                            <div class="form-group">
                                 <label for="sign-up-email" class="control-label">Email</label>
                                 <input type="email" id="sign-up-email" class="form-control brr">
                             </div>
@@ -130,6 +125,49 @@
                             <div class="form-group">
                                 <label for="login-password" class="control-label">Password</label>
                                 <input type="password" id="login-password" class="form-control brr">
+                            </div>
+                            <div class="form-group">
+                                <p>Forgot your password? <a href="#forgot-password">Reset It</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="forgot-password">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 pt25 pb25">
+                <div class="vertical-middle-parent">
+                    <div class="vertical-middle">
+                        <img src="images/logo.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="panel shadow-effect br" style="position: relative;overflow: hidden;">
+                    <form id="forgot-password-form">
+                        <div class="panel-heading">
+                            <a href="#" onclick="goBack();">
+                                <span class="w20 pull-left"><i class="icon icon-back fs20 fwb"></i></span>
+                            </a>
+                            <h3 class="panel-title  pull-left w60">Forgot Password</h3>
+                            <a href="#home" id="forgot-password-button">
+                                <span class="w20  pull-left">
+                                    <i class="icon icon-confirm fs20 fwb pull-right"></i>
+                                </span>
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="forgot-password-email" class="control-label">Email</label>
+                                <input type="email" id="forgot-password-email" class="form-control brr">
+                            </div>
+                            <div class="form-group">
+                                <p>Remembered your password? <a href="#login" rel="back">Sign In here</a></p>
                             </div>
                         </div>
                     </form>
@@ -446,7 +484,12 @@
                             </div>
                         </div>
                         <div class="details-container transition">
+
+                            <a class="read-more btn btn-block">
+                                <img src="images/down.png" alt="">
+                            </a>
                             <div class="card br slant">
+                                <a href="#edit-details"><span class="edit"><i class="icon icon-pentool"></i></span></a>
                                 <h4>Basic Details</h4>
                                 <p>
                                     Name : Deepika Padukone<br>
@@ -510,12 +553,7 @@
 
                                 </p>
                             </div>
-
-
                         </div>
-                        <a class="read-more btn btn-block">
-                            <img src="images/down.png" alt="">
-                        </a>
                     </div>
                     <div class="my-images transition panel-body">
                         <div class="row">
@@ -540,6 +578,92 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="edit-details">
+    <div class="container">
+        <div class="row " >
+            <div class="col-xs-12">
+                <ul class="main-nav">
+                    <li>
+                        <a href="#home"><i class="icon icon-home fs30 text-center fwb"></i><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="#messages"><i class="icon icon-message fs30 text-center fwb"></i><span>Messages</span></a>
+                    </li>
+                    <li>
+                        <a href="#matches" ><i class="icon icon-group fs30 text-center fwb"></i><span>Matches</span></a>
+                    </li>
+                    <li>
+                        <a href="#profile"  class="active"><i class="icon icon-girl fs30 text-center fwb"></i><span>Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="#search"><i class="icon icon-search fs30 text-center fwb"></i><span>Search</span></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel shadow-effect br overflow-hidden profile-page">
+                    <div class="panel-heading">
+                        <a href="#" onclick="goBack();">
+                            <span class="w20 pull-left"><i class="icon icon-back fs20 fwb"></i></span>
+                        </a>
+                        <h3 class="panel-title  pull-left w60 profile-edit-setup-title">Edit Profile</h3>
+                        <a id="save-updated-profile">
+                            <span class="w20  pull-left">
+                                <i class="icon icon-confirm fs20 fwb pull-right"></i>
+                            </span>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-body">
+                        <form id="profile-update-form">
+                            <div class="form-section">
+                                <h3>Basic Details</h3>
+                                <div class="form-group">
+                                    <label class="control-label">Email</label>
+                                    <input type="email" name="email" class="form-control brr">
+                                </div>
+                                <div class="form-group">
+                                    <div><label class="control-label">Gender</label></div>
+                                    <div class="w48">
+                                        <label class="control-label" for="gender-male">Male</label>
+                                        <input type="radio" name="gender" value="male" id="gender-male" class="form-control brr">
+                                    </div>
+                                    <div class="w48 ml2">
+                                        <label class="control-label" for="gender-female">Female</label>
+                                        <input type="radio" name="gender" value="female" id="gender-female" class="form-control brr">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Age</label>
+                                    <input type="email" name="age" class="form-control brr">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Martial Status</label>
+                                    <select name="martial_status" class="form-control brr">
+                                        <option value="1">Never Married</option>
+                                        <option value="2">Divorced</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Physical Status</label>
+                                    <select name="martial_status" class="form-control brr">
+                                        <option value="1">Normal</option>
+                                        <option value="2">Physically Challenged</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>

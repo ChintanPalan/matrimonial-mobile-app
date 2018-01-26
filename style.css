@@ -142,15 +142,24 @@ ul.main-nav li a span{ font-size: 15px;display: block; }
 .panel-body .details-container .card{ border:2px solid var(--main-color);margin: 10px 0;padding: 5px; }
 .panel-body .details-container .card h4{ font-size: 18px;margin: 0px;font-weight: bold; }
 .panel-body .details-container .card p{ font-size: 15px;line-height:17px;color:black; }
-.panel-body a.read-more{ background: var(--color-1);border-radius: 0;position: absolute;left: 0;bottom: 0;padding: 0;background-color: rgba(255, 255, 255, 0.6);padding-bottom: 3px;opacity: 1;}
+.panel-body a.read-more{ background: var(--color-1);border-radius: 0;position: absolute;left: 0;bottom: 0;padding: 0;background-color: rgba(255, 255, 255, 0.6);padding-bottom: 3px;opacity: 1;z-index: 1;}
 .panel-body a.read-more img{ width: 25px;}
 
 .profile-page.closeimg .panel-body .img-container span.overlay{ height:150vh; }
-.profile-page.closeimg .panel-body .img-container{ max-height:50px;margin-bottom: 5px; }
+.profile-page.closeimg .panel-body .img-container{ max-height:50px;margin-bottom: 30px; }
 .profile-page.closeimg .panel-body.my-images{ max-height:0px;padding: 0px; }
 .profile-page.closeimg .details-container{ max-height:5000px;}
 .profile-page.closeimg .details-container{ max-height:5000px;}
-.profile-page.closeimg a.read-more{ opacity:0;}
+.profile-page.closeimg a.read-more{ transform: rotateX(180deg);padding-bottom: 10px;top:50px;bottom: unset;}
+.card{ position: relative; }
+.ui-checkbox input,.ui-radio input{display: none;}
+.ui-checkbox label,.ui-radio label{border: 1px solid;
+    border-radius: 0 7px;
+    display: block;
+    padding: 3px;
+    text-align: center;transition: all 0.5s;}
+.ui-checkbox label.ui-checkbox-on,.ui-radio label.ui-radio-on{background: var(--main-color);color: white;}
+.card span.edit{ position: absolute;right: 0;top: 0;border-bottom: 2px solid;border-left: 2px solid;width: 30px;padding: 0;height: 30px;padding: 4px;}
 
 /* Padding & margin classes */
 .p25{ padding: 25px; }
@@ -171,10 +180,12 @@ ul.main-nav li a span{ font-size: 15px;display: block; }
 .w10{ width: 10%; }
 .w20{ width: 20%; }
 .w40{ width: 40%; }
+.w48{ width: 48%;
+    display: inline-block; }
+.ml2{ margin-left: 2%; }
 .w50{ width: 50%; }
 .w60{ width: 60%; }
 .w80{ width: 80%; }
 .w100{ width: 100%; }
-
 /* Animations css */
-.transition{transition: all 1.5s ease;}
+.transition{transition: all 1s ease;}
