@@ -17,6 +17,8 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+            <preference name="android-minSdkVersion" value="15" />
+
     </platform>
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="1000" />
