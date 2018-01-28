@@ -40,7 +40,7 @@ document.addEventListener('deviceready', function () {
             }
         }
     };
-    window.plugins.OneSignal.startInit("998cc2ea-1737-448d-bded-e2312a542d62").handleNotificationOpened(notificationOpenedCallback).endInit();
+    window.plugins.OneSignal.startInit("3173415d-8b6c-4dee-a258-3764a2e7175c").handleNotificationOpened(notificationOpenedCallback).endInit();
 }, false);
 /* Main variables declaration */
 var signUpForm,
